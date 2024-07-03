@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
@@ -15,7 +16,7 @@ body {
 }
 
 .container {
-    background: #fff;
+    background: #e6e6e6;
     border-radius: 30px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     position: relative;
@@ -97,8 +98,7 @@ body {
 }
 
 .container.active .sign-in {
-    transform: translateX(100%);
-    /*mover o elemento na horizontal*/
+    transform: translateX(100%); /*mover o elemento na horizontal*/
 }
 
 .sign-up {
@@ -165,7 +165,7 @@ permite Criar pontos especificos no tempo da animação
 
 .toggle {
     background: #512da8;
-    background: linear-gradient(to rigght #5c6bc0, #512da8);
+    background: linear-gradient(to right #5c6bc0, #512da8);
     height: 100%;
     color: #fff;
     position: relative;
@@ -176,7 +176,7 @@ permite Criar pontos especificos no tempo da animação
 }
 
 .container.active .toggle {
-    position: absolute;
+    transform: translateX(50%);
 }
 
 .toggle-painel {
@@ -192,4 +192,21 @@ permite Criar pontos especificos no tempo da animação
     top: 0;
     transform: translateX(0);
     transition: all 0.6s ease-in-out;
+}
+
+.toggle-left {
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left {
+    transform: translateX(0);
+}
+
+.toggle-right {
+    right: 0;
+    transform: translateX(0);
+}
+
+.container.active .toggle-right {
+    transform: translateX(200%);
 }
